@@ -1425,7 +1425,6 @@ int main(void)
     buf_hs[3]=0;  
 #endif
     i = 0x1000;
-    //data = 0x22;
     stop = 0;
     while (i--);
 
