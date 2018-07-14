@@ -1,0 +1,141 @@
+---- HAL_Delay Matches (137 in 55 files) ----
+Readme.txt:@note Care must be taken when using HAL_Delay(), this function provides accurate delay (in milliseconds)
+Readme.txt:      based on variable incremented in SysTick ISR. This implies that if HAL_Delay() is called from
+Release_Notes.html (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver):HAL_I2S_RxCpltCallback() API's will be replaced with only </span><span style="font-size: 10pt; font-family: &quot;Verdana&quot;,sans-serif; color: black;" lang="EN-US">HAL_I2SEx_TxRxCpltCallback()</span><span style="font-size: 10pt; font-family: &quot;Verdana&quot;,sans-serif; color: black;" lang="EN-US"> API.&nbsp;</span><span style="font-size: 10pt; font-family: &quot;Verdana&quot;,sans-serif; color: black;" lang="EN-US"></span></li></ul></ul></ul><li style="margin-top: 4.5pt; margin-bottom: 4.5pt; color: black;" class="MsoNormal"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;"><span style="font-weight: bold;">HAL </span>update</span></li><ul><li style="margin-top: 4.5pt; margin-bottom: 4.5pt; color: black;" class="MsoNormal"><span style="font-size: 10pt; font-family: Verdana,sans-serif;">Modifiy default HAL_Delay implementation to guarantee minimum delay&nbsp;</span></li></ul><li style="margin-top: 4.5pt; margin-bottom: 4.5pt; color: black;" class="MsoNormal"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;"><span style="font-weight: bold;">HAL Cortex</span> update</span></li><ul><li style="margin-top: 4.5pt; margin-bottom: 4.5pt; color: black;" class="MsoNormal"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;">Move HAL_MPU_Disable() and HAL_MPU_Enable() from stm32f4xx_hal_cortex.h to stm32f4xx_hal_cortex.c</span></li><li style="margin-top: 4.5pt; margin-bottom: 4.5pt; color: black;" class="MsoNormal"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;">Clear the whole MPU control register in&nbsp;</span><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;">HAL_MPU_Disable() API</span></li></ul><li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;"><span style="font-weight: bold;">HAL FLASH</span> update</span></li><ul><li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;">IS_FLASH_ADDRESS() macro update to support OTP range</span></li><li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span style="font-family: 'Verdana','sans-serif'; font-size: 10pt;">FLASH_Program_DoubleWord(): Replace 64-bit accesses with 2 double-words operations<br></span></li></ul><li class="MsoNormal" style="margin: 4.5pt 0in; font-size: 12pt; font-family: 'Times New Roman',serif; color: black;"><span style="font-family: Verdana,sans-serif; font-size: 10pt;"><span style="font-weight: bold;">LL GPIO</span><span class="Apple-converted-space"> </span>update</span></li><ul><li class="MsoNormal" style="margin: 4.5pt 0in; font-size: 12pt; font-family: 'Times New Roman',serif; color: black;"><span style="font-family: Verdana,sans-serif; font-size: 10pt;">Update IS_GPIO_PIN() macro implementation to be more safe</span></li></ul><li class="MsoNormal" style="margin: 4.5pt 0in; font-size: 12pt; font-family: 'Times New Roman',serif; color: black;"><span style="font-family: Verdana,sans-serif; font-size: 10pt;"><span style="font-weight: bold;">LL RCC</span><span class="Apple-converted-space"> </span>update</span></li><ul><li class="MsoNormal" style="margin: 4.5pt 0in; font-size: 12pt; font-family: 'Times New Roman',serif; color: black;"><span style="font-family: Verdana,sans-serif; font-size: 10pt;">Update IS_RCC_PLLQ_VALUE() macro implementation: the minimum accepted&nbsp;value is 2 instead of 4</span></li><li class="MsoNormal" style="margin: 4.5pt 0in; font-size: 12pt; font-family: 'Times New Roman',serif; color: black;"><span style="font-size: 10pt; font-family: &quot;Verdana&quot;,sans-serif;" lang="EN-US">Rename RCC_LPTIM1CLKSOURCE_PCLK define to RCC_LPTIM1CLKSOURCE_PCLK1</span></li><li class="MsoNormal" style="margin: 4.5pt 0in; font-size: 12pt; font-family: 'Times New Roman',serif; color: black;"><span style="font-size: 10pt; font-fami
+Release_Notes.html (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver):                <li class="MsoNormal" style="color: black; margin-top: 4.5pt; margin-bottom: 4.5pt;"><span style="font-size: 10pt; font-family: &quot;Verdana&quot;,&quot;sans-serif&quot;;">Use HAL_Delay() instead of counting loop<br>
+Stm32412g_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(Delay);
+Stm32412g_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(Delay);
+Stm32412g_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(Delay);
+Stm32412g_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):      HAL_Delay(1);
+Stm32412g_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):    HAL_Delay(1);
+Stm32412g_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(5);   /* Reset signal asserted during 5ms  */
+Stm32412g_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(10);  /* Reset signal released during 10ms */
+Stm32412g_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(20);  /* Reset signal asserted during 20ms */
+Stm32412g_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32412g-discovery):  HAL_Delay(10);  /* Reset signal released during 10ms */
+Stm32446e_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(Delay);
+Stm32446e_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(Delay);
+Stm32446e_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(Delay);
+Stm32446e_eval_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):      HAL_Delay(1);
+Stm32446e_eval_camera.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(100);   /* RST and XSDN signals asserted during 100ms */
+Stm32446e_eval_camera.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(3);     /* RST de-asserted and XSDN asserted during 3ms */
+Stm32446e_eval_camera.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(6);     /* RST de-asserted during 3ms */
+Stm32446e_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  * @note   BSP_IO_Init() is using HAL_Delay() function to ensure that MFXSTM32L152
+Stm32446e_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  *         IO Expander is correctly reset. HAL_Delay() function provides accurate
+Stm32446e_eval_sd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(100);
+Stm32446e_eval_sdram.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32446e_eval):  HAL_Delay(1);
+Stm32469i_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):  HAL_Delay(Delay);
+Stm32469i_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):  HAL_Delay(Delay);
+Stm32469i_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):  HAL_Delay(Delay);
+Stm32469i_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):      HAL_Delay(2);
+Stm32469i_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):    HAL_Delay(20); /* wait 20 ms */
+Stm32469i_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):    HAL_Delay(10);    
+Stm32469i_discovery_sdram.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i-discovery):  HAL_Delay(1);
+Stm32469i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(Delay);
+Stm32469i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(Delay);
+Stm32469i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(Delay);
+Stm32469i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(Delay);
+Stm32469i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(Delay);
+Stm32469i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(Delay);
+Stm32469i_eval_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):      HAL_Delay(1);
+Stm32469i_eval_camera.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(100);   /* RST and XSDN signals asserted during 100ms */
+Stm32469i_eval_camera.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(3);     /* RST de-asserted and XSDN asserted during 3ms */
+Stm32469i_eval_camera.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(6);     /* RST de-asserted during 3ms */
+Stm32469i_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  * @note   BSP_IO_Init() is using HAL_Delay() function to ensure that MFXSTM32L152
+Stm32469i_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  *         IO Expander is correctly reset. HAL_Delay() function provides accurate
+Stm32469i_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(1);
+Stm32469i_eval_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):    HAL_Delay(20); /* wait 20 ms */
+Stm32469i_eval_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):    HAL_Delay(10);    
+Stm32469i_eval_sd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(100);
+Stm32469i_eval_sdram.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32469i_eval):  HAL_Delay(1);
+Stm324x9i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):  HAL_Delay(Delay);
+Stm324x9i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):  HAL_Delay(Delay);
+Stm324x9i_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):  HAL_Delay(Delay);
+Stm324x9i_eval_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):      HAL_Delay(1);
+Stm324x9i_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):  * @note   BSP_IO_Init() is using HAL_Delay() function to ensure that stmpe1600
+Stm324x9i_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):  *         IO Expander is correctly reset. HAL_Delay() function provides accurate
+Stm324x9i_eval_sdram.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324x9i_eval):  HAL_Delay(1);
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = EXTI15_10_IRQHandler &rArr; HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<P><STRONG><a name="[71]"></a>HAL_Delay</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, stm32f4xx_hal.o(i.HAL_Delay))
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HAL_GPIO_EXTI_Callback &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = HAL_GPIO_EXTI_IRQHandler &rArr; HAL_GPIO_EXTI_Callback &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = HAL_PCD_Start &rArr; USB_DevConnect &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = USBD_LL_Start &rArr; HAL_PCD_Start &rArr; USB_DevConnect &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_Start &rArr; USBD_LL_Start &rArr; HAL_PCD_Start &rArr; USB_DevConnect &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USB_DevConnect &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = USB_DevDisconnect &rArr; HAL_Delay
+STM324xG-EVAL_USBD-FS.htm (mdk-arm\stm324xg-eval_usbd-fs):<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+Stm324xg_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):  HAL_Delay(Delay);
+Stm324xg_eval.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):  HAL_Delay(Delay);
+Stm324xg_eval_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):      HAL_Delay(1);
+Stm324xg_eval_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):  HAL_Delay(CODEC_RESET_DELAY); 
+Stm324xg_eval_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):  HAL_Delay(CODEC_RESET_DELAY); 
+Stm324xg_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):  * @note   BSP_IO_Init() is using HAL_Delay() function to ensure that stmpe811
+Stm324xg_eval_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm324xg_eval):  *         IO Expander is correctly reset. HAL_Delay() function provides accurate
+Stm32f401_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f401-discovery):  HAL_Delay(5); 
+Stm32f401_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f401-discovery):  HAL_Delay(5); 
+Stm32f401_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f401-discovery):      HAL_Delay(1);
+Stm32f411e_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f411e-discovery):  HAL_Delay(5); 
+Stm32f411e_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f411e-discovery):  HAL_Delay(5); 
+Stm32f411e_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f411e-discovery):      HAL_Delay(1);
+Stm32f413h_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(Delay);
+Stm32f413h_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(Delay);
+Stm32f413h_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(Delay);
+Stm32f413h_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):      HAL_Delay(1);
+Stm32f413h_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):    HAL_Delay(1);
+Stm32f413h_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(5);   /* Reset signal asserted during 5ms  */
+Stm32f413h_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(10);  /* Reset signal released during 10ms */
+Stm32f413h_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(20);  /* Reset signal asserted during 20ms */
+Stm32f413h_discovery_lcd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f413h-discovery):  HAL_Delay(10);  /* Reset signal released during 10ms */
+Stm32f429i_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f429i-discovery):  HAL_Delay(Delay);
+Stm32f429i_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f429i-discovery):  HAL_Delay(Delay);
+Stm32f429i_discovery_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f429i-discovery):  * @note   BSP_IO_Init() is using HAL_Delay() function to ensure that stmpe811
+Stm32f429i_discovery_io.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f429i-discovery):  *         IO Expander is correctly reset. HAL_Delay() function provides accurate
+Stm32f429i_discovery_sdram.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f429i-discovery):  HAL_Delay(1);
+Stm32f4xx_hal.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):             time intervals. Care must be taken if HAL_Delay() is called from a 
+Stm32f4xx_hal.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  * @note   SysTick is used as time base for the HAL_Delay() function, the application
+Stm32f4xx_hal.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  *       Care must be taken if HAL_Delay() is called from a peripheral ISR process, 
+Stm32f4xx_hal.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):__weak void HAL_Delay(uint32_t Delay)
+Stm32f4xx_hal.h (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\inc):void HAL_Delay(uint32_t Delay);
+Stm32f4xx_hal_dsi.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(1U);
+Stm32f4xx_hal_dsi.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(1U);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(PHY_RESET_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(PHY_CONFIG_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):     HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):     HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):      HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):   HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):   HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):   HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_eth.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):     HAL_Delay(ETH_REG_WRITE_DELAY);
+Stm32f4xx_hal_mmc.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(2U);
+Stm32f4xx_hal_pcd_ex.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(100U); 
+Stm32f4xx_hal_pcd_ex.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):    HAL_Delay(100U); 
+Stm32f4xx_hal_pcd_ex.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):      HAL_Delay(100U); 
+Stm32f4xx_hal_sd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(2U);
+Stm32f4xx_ll_usb.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  //HAL_Delay(50U);//TT.Henry 180710
+Stm32f4xx_ll_usb.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(3U);
+Stm32f4xx_ll_usb.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(3U);
+Stm32f4xx_ll_usb.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay(200U);
+Stm32f4xx_ll_usb.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\stm32f4xx_hal_driver\src):  HAL_Delay (10U);                                /* See Note #1 */
+Stm32f4xx_nucleo.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f4xx-nucleo):  HAL_Delay(Delay);
+Stm32f4xx_nucleo_144.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f4xx_nucleo_144):  HAL_Delay(Delay);
+Stm32f4_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f4-discovery):  HAL_Delay(5); 
+Stm32f4_discovery.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f4-discovery):  HAL_Delay(5); 
+Stm32f4_discovery_audio.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\stm32f4-discovery):      HAL_Delay(1);
+Stm32_adafruit_sd.c (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\adafruit_shield):    HAL_Delay(1);
+Stm32_adafruit_sd.h (c:\users\huangcaihui\desktop\stm32cube_fw_f4_v1.21.0\drivers\bsp\adafruit_shield):void HAL_Delay(__IO uint32_t Delay);
+Usbd_conf.c (src):      HAL_Delay(10);
+Usbd_conf.c (src):  HAL_Delay(Delay);
+---- HAL_Delay Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+C:\Users\huangcaihui\Desktop\STM32Cube_FW_F4_V1.21.0\Projects\STM324xG_EVAL\Applications\USB_Device\HID_Standalone\MDK-ARM\JLinkLog.txt : File could not be opened.
