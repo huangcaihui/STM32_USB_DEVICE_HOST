@@ -1,0 +1,140 @@
+---- pIf_Init Matches (3 in 3 files) ----
+App.c (app\src):    APP_VCP_FOPS.pIf_Init();
+Usbd_cdc_core.c (libraries\stm32_usb_device_library\class\cdc\src):  APP_VCP_FOPS.pIf_Init();
+Usbd_cdc_core.h (libraries\stm32_usb_device_library\class\cdc\inc):  uint16_t (*pIf_Init)     (void);   
+---- pIf_Init Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkLog.txt : File could not be opened.
+---- osMessageQId Matches (0 in 0 files) ----
+---- sEE_WriteBuffer Matches (0 in 0 files) ----
+---- pIf_Init Matches (3 in 3 files) ----
+App.c (app\src):    APP_VCP_FOPS.pIf_Init();
+Usbd_cdc_core.c (libraries\stm32_usb_device_library\class\cdc\src):  APP_VCP_FOPS.pIf_Init();
+Usbd_cdc_core.h (libraries\stm32_usb_device_library\class\cdc\inc):  uint16_t (*pIf_Init)     (void);   
+---- huangcaihui Matches (12 in 3 files) ----
+App.c (app\src):    #if 1//chg by huangcaihui 180621
+App.c (app\src):                #if 0//add by huangcaihui 180621
+JLinkLog.txt (app\mdk):T16B8 000:174 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0000ms, 0174ms total)
+JLinkLog.txt (app\mdk):T16B8 101:804 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0000ms, 0762ms total)
+JLinkLog.txt (app\mdk):T16B8 73178:358 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0000ms, 1593ms total)
+JLinkLog.txt (app\mdk):T16B8 78494:211 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0001ms, 2327ms total)
+JLinkLog.txt (app\mdk):T16B8 79169:926 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0001ms, 3081ms total)
+JLinkLog.txt (app\mdk):T16B8 100830:084 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0000ms, 3880ms total)
+JLinkLog.txt (app\mdk):T16B8 100985:942 JLINK_ExecCommand("ProjectFile = "C:\Users\huangcaihui\Desktop\资料\贾工给的代码\usb-demo-180702\usb-demo.git\app\MDK\JLinkSettings.ini"", ...)  returns 0x00 (0000ms, 4564ms total)
+Usbd_cdc_vcp.c (app\src):  #if 1//TOUCH_USB_AUTO_TEST//add by huangcaihui 180627
+Usbd_cdc_vcp.c (app\src):    #if 1//TOUCH_USB_AUTO_TEST//add by huangcaihui 180627
+Usbd_cdc_vcp.c (app\src):#if 1//TOUCH_USB_AUTO_TEST//add by huangcaihui 180627
+---- HID Class Spec release number Matches (2 in 1 files) ----
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  0x00,         /*bcdHID: HID Class Spec release number*/
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  0x00,         /*bcdHID: HID Class Spec release number*/
+---- HID_OUT_EP Matches (6 in 2 files) ----
+Usbd_conf.h (app\inc):#define HID_OUT_EP                      0x01
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  HID_OUT_EP,     /*bEndpointAddress: Endpoint Address (IN)*/
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):              HID_OUT_EP,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):                   HID_OUT_EP,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  DCD_EP_Close (pdev , HID_OUT_EP);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):                   HID_OUT_EP,
+---- DCD_EP_PrepareRx Matches (28 in 7 files) ----
+F4.htm (app\mdk\f4):<P><STRONG><a name="[8f]"></a>DCD_EP_PrepareRx</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, usb_dcd.o(i.DCD_EP_PrepareRx))
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_CtlContinueRx &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_CtlPrepareRx &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = USBD_CtlReceiveStatus &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_HID_DataOut &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = USBD_HID_Init &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = USBD_DataInStage &rArr; USBD_CtlReceiveStatus &rArr; DCD_EP_PrepareRx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DCD_EP_PrepareRx
+Usbd_cdc_core.c (libraries\stm32_usb_device_library\class\cdc\src):  DCD_EP_PrepareRx(pdev,
+Usbd_cdc_core.c (libraries\stm32_usb_device_library\class\cdc\src):  DCD_EP_PrepareRx(pdev,
+Usbd_core.c (libraries\stm32_usb_device_library\core\src):        DCD_EP_PrepareRx (pdev,
+Usbd_core.c (libraries\stm32_usb_device_library\core\src):          DCD_EP_PrepareRx (pdev,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  DCD_EP_PrepareRx(pdev,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):    DCD_EP_PrepareRx(pdev,
+Usbd_ioreq.c (libraries\stm32_usb_device_library\core\src):  DCD_EP_PrepareRx (pdev,
+Usbd_ioreq.c (libraries\stm32_usb_device_library\core\src):  DCD_EP_PrepareRx (pdev,
+Usbd_ioreq.c (libraries\stm32_usb_device_library\core\src):  DCD_EP_PrepareRx ( pdev,
+Usb_dcd.c (libraries\stm32_usb_otg_driver\src):* @brief  DCD_EP_PrepareRx
+Usb_dcd.c (libraries\stm32_usb_otg_driver\src):uint32_t   DCD_EP_PrepareRx( USB_OTG_CORE_HANDLE *pdev,
+Usb_dcd.h (libraries\stm32_usb_otg_driver\inc):uint32_t   DCD_EP_PrepareRx ( USB_OTG_CORE_HANDLE *pdev,
+---- USB_Hid_Rx_Buffer Matches (9 in 1 files) ----
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):__ALIGN_BEGIN uint8_t USB_Hid_Rx_Buffer   [HID_IN_PACKET] __ALIGN_END ;
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):                   (uint8_t*)(USB_Hid_Rx_Buffer),
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):                (uint8_t *)&USB_Hid_Rx_Buffer,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):        USB_Hid_Rx_Buffer[0] = 0x03;
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):        USB_Hid_Rx_Buffer[1] = 0x0a;
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):                          (uint8_t *)&USB_Hid_Rx_Buffer,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):    dbg_dump(USB_Hid_Rx_Buffer,USB_Rx_Cnt);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):                   (uint8_t*)(USB_Hid_Rx_Buffer),
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):    dbg_dump(USB_Hid_Rx_Buffer,USBD_HID_Report_LENGTH);
+---- OTG_FS_IRQHandler Matches (6 in 3 files) ----
+F4.htm (app\mdk\f4): <LI><a href="#[70]">OTG_FS_IRQHandler</a> from stm32fxxx_it.o(i.OTG_FS_IRQHandler) referenced from startup_stm32f40xx.o(RESET)
+F4.htm (app\mdk\f4):<P><STRONG><a name="[70]"></a>OTG_FS_IRQHandler</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, stm32fxxx_it.o(i.OTG_FS_IRQHandler))
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = OTG_FS_IRQHandler &rArr; USBD_OTG_ISR_Handler &rArr; DCD_HandleInEP_ISR &rArr; DCD_WriteEmptyTxFifo &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OTG_FS_IRQHandler
+Stm32fxxx_it.c (app\src):void OTG_FS_IRQHandler(void)
+Stm32fxxx_it.h (app\inc):void OTG_FS_IRQHandler(void);
+---- ENTER_CR Matches (0 in 0 files) ----
+---- > HID Device in Suspend Mode. Matches (2 in 1 files) ----
+Usbd_usr.c (app\src)://  LCD_UsrLog("> HID Device in Suspend Mode.\n");
+Usbd_usr.c (app\src):    printf("> HID Device in Suspend Mode.\n");
+---- > HID Device in Suspend Mode. Search Errors Encountered (1) ----
+The following 1 files could not be processed:
+C:\Users\huangcaihui\Desktop\STM32_USB\usb-demo-180702\usb-demo.git\app\MDK\JLinkLog.txt : File could not be opened.
+---- USBD_HID_SndBuf Matches (10 in 2 files) ----
+App.c (app\src):                                                             USBD_HID_SndBuf,  
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):__ALIGN_BEGIN u8 USBD_HID_SndBuf[64] __ALIGN_END;
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):            memcpy(USBD_HID_SndBuf, report, len);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):            DCD_EP_Tx (pdev, HID_IN_EP, USBD_HID_SndBuf, len);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):            USBD_FIFO_Pop(&USBD_HID_TxFIFO_EP1, USBD_HID_SndBuf, &len);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):            DCD_EP_Tx (pdev, HID_IN_EP, USBD_HID_SndBuf, len);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):            printf("DataIn len=%d buf[0]=%x,buf[1]=%x,buf[2]=%x,buf[3]=%x \n",len,USBD_HID_SndBuf[0],USBD_HID_SndBuf[1],USBD_HID_SndBuf[2],USBD_HID_SndBuf[3]);
+---- USBD_HID_RcvBuf Matches (11 in 3 files) ----
+App.c (app\src):extern u8 USBD_HID_RcvBuf[64];
+App.c (app\src):                                                             USBD_HID_RcvBuf,  
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):__ALIGN_BEGIN u8 USBD_HID_RcvBuf[64] __ALIGN_END;
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  DCD_EP_PrepareRx(pdev, HID_OUT_EP, USBD_HID_RcvBuf, 64);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):        memcpy(buffer, USBD_HID_RcvBuf, 64);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):        DCD_EP_PrepareRx(pdev, HID_OUT_EP, USBD_HID_RcvBuf, 64);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):        printf("DataOUT  buf[0]=%x,buf[1]=%x,buf[2]=%x,buf[3]=%x \n",USBD_HID_RcvBuf[0],USBD_HID_RcvBuf[1],USBD_HID_RcvBuf[2],USBD_HID_RcvBuf[3]);
+Usbd_hid_core.h (libraries\stm32_usb_device_library\class\hid\inc):extern u8 USBD_HID_RcvBuf[64];
+---- USBD_HID_cb Matches (5 in 5 files) ----
+App.c (app\src):            &USBD_HID_cb,
+Usbd_hid_core - 副本.c (libraries\stm32_usb_device_library\class\hid\src):USBD_Class_cb_TypeDef  USBD_HID_cb = 
+Usbd_hid_core - 副本.h (libraries\stm32_usb_device_library\class\hid\inc):extern USBD_Class_cb_TypeDef  USBD_HID_cb;
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):USBD_Class_cb_TypeDef  USBD_HID_cb =
+Usbd_hid_core.h (libraries\stm32_usb_device_library\class\hid\inc):extern USBD_Class_cb_TypeDef  USBD_HID_cb;
+---- my_usb_status Matches (8 in 2 files) ----
+App.c (app\src):extern int my_usb_status;
+App.c (app\src):                if(my_usb_status){
+App.c (app\src):                if(my_usb_status)
+Usbd_usr.c (app\src):int my_usb_status = 0;
+Usbd_usr.c (app\src):    my_usb_status |= 1;
+Usbd_usr.c (app\src):    my_usb_status &= ~1;
+Usbd_usr.c (app\src):    my_usb_status |= 0x10;
+Usbd_usr.c (app\src):    my_usb_status &= ~0x10;
+---- USBD_HID_SendReport Matches (18 in 7 files) ----
+App.c (app\src):                        USBD_HID_SendReport (&USB_OTG_FS_dev,   
+App.c (app\src):                        USBD_HID_SendReport (&USB_OTG_HS_dev,   
+F4.htm (app\mdk\f4):<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_SendReport
+F4.htm (app\mdk\f4):<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_SendReport
+F4.htm (app\mdk\f4):<BR>[Called By]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_SendReport
+F4.htm (app\mdk\f4):<P><STRONG><a name="[d7]"></a>USBD_HID_SendReport</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, usbd_hid_core.o(i.USBD_HID_SendReport))
+F4.htm (app\mdk\f4):<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = USBD_HID_SendReport &rArr; DCD_EP_Tx &rArr; USB_OTG_EPStartXfer &rArr; USB_OTG_WritePacket
+F4.htm (app\mdk\f4):<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USBD_HID_SendReport
+Stm32fxxx_it.c (app\src):      USBD_HID_SendReport (&USB_OTG_FS_dev, 
+Usbd_hid_core - 副本.c (libraries\stm32_usb_device_library\class\hid\src):  * @brief  USBD_HID_SendReport 
+Usbd_hid_core - 副本.c (libraries\stm32_usb_device_library\class\hid\src):uint8_t USBD_HID_SendReport     (USB_OTG_CORE_HANDLE  *pdev, 
+Usbd_hid_core - 副本.h (libraries\stm32_usb_device_library\class\hid\inc):uint8_t USBD_HID_SendReport (USB_OTG_CORE_HANDLE  *pdev, 
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  * @brief  USBD_HID_SendReport
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):uint8_t USBD_HID_SendReport     (USB_OTG_CORE_HANDLE  *pdev,
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):  * @brief  USBD_HID_SendReport
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):    return USBD_HID_SendReport (pdev, report, len);
+Usbd_hid_core.c (libraries\stm32_usb_device_library\class\hid\src):    return USBD_HID_SendReport (pdev, report, len);
+Usbd_hid_core.h (libraries\stm32_usb_device_library\class\hid\inc):uint8_t USBD_HID_SendReport (USB_OTG_CORE_HANDLE  *pdev,

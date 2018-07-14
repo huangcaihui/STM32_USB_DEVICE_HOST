@@ -1,0 +1,11 @@
+# comping leave
+app/MDK/f4
+app/MDK/f4lst
+app/MDK/*.bak
+app/MDK/Jlink*
+# other
+debug/
+release/
+.settings/
+.cproject
+.project
